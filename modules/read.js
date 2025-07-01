@@ -1,12 +1,14 @@
-import {readFile} from 'node:fs'
+import {readFile, writeFile} from 'node:fs'
 
-function fileReder(){
+function fileReder(path, write){
     readFile(path, 'utf8', (err, data) => {
-        if (err){
-            console.error(err);
-        }
-        else {
-            // המשך יבוא
+        if (err) throw err;
+        else if (write){
+            
+            writeFile(path, data, (err) => {
+                if (err) throw err;
+                console.log('The file has been saved!');
+            });
         }
     })
 }
