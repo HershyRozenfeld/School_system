@@ -1,0 +1,10 @@
+{
+  "name": "school-crud",
+  "version": "1.0.0",
+  "description": "A terminal app for a school database.",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js"
+  }
+}
